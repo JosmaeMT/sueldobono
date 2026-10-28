@@ -1,0 +1,109 @@
+:root {
+    --fondo: #eef2f6;
+    --tarjeta: #ffffff;
+    --texto: #1b2a3a;
+    --texto-suave: #5b6b7b;
+    --principal: #1f4e79;
+    --acento: #2e8b57;
+    --borde: #d5dde6;
+    --fila-alterna: #f4f8fc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 4px;
+    font-size: 1.8rem;
+    color: var(--principal);
+}
+
+.subtitulo {
+    margin: 0 0 24px;
+    color: var(--texto-suave);
+}
+
+.tarjeta {
+    background: var(--tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 12px 10px;
+    border: 1px solid var(--principal);
+    white-space: nowrap;
+    height: 46px;
+}
+
+th {
+    background: var(--principal);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+th:first-child {
+    border-top-left-radius: 6px;
+}
+
+th:last-child {
+    border-top-right-radius: 6px;
+}
+
+/* Filas alternas para distinguir a cada empleado */
+tr:nth-child(even) td {
+    background: var(--fila-alterna);
+}
+
+tr:hover td {
+    background: #e6eef7;
+}
+
+td.nombre {
+    text-align: left;
+    font-weight: 600;
+}
+
+td.total {
+    font-weight: 700;
+    color: var(--acento);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+}
